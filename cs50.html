@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" style="background:grey">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+<script>
+
+    let counter = 0;
+
+    function count(){
+            counter++;
+            document.querySelector('.lol').innerHTML = counter;
+             if (counter % 10 === 0)   {
+                alert(`count is now ${counter}`)
+
+             }
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('button').onclick = count;
+    })
+    
+
+
+    </script>
+</head>
+<body>
+    
+<h1 class="lol">0</h1>
+<button onclick="count()">Count</button>
+
+
+
+
+
+
+</body>
+</html>
+
+
+<!--
+    Javascript gives us the ability to directly manipulate the DOM DOCUMENT OBJECT MODEL
+    tree that represents the web page the user is looking at and how it interacts
+
+    Alert is the name of a FUNCTION which can include an ARGUMENT ('Hello, world!');
+
+    EVENT DRIVEN PROGRAMMING which is buildt around user interaction
+    Eventlisteners is when an event happpens run this spesific code
+
+    onclick is a type of handler
+    onclick="function name" CALLS or RUNS the function
+FIND THE H1 ELEMENT IN THE HTML FILE AND UPDATE ITS PROPERTY = 
+ document.querySelector('h1').innerHTML = 'goodby';
+
+CONDITIONS
+
+can look for information only once by storeing the element inside a variable
+
+THE VARIABLES LETS UN IMPROVE UPON THE CODE SEE ABOVE
+function hello (){
+    let heading = document.querySelector('.lol')
+
+    if(document.querySelector('.lol').innerHTML === 'hello!'){
+        document.querySelector('.lol').innerHTML = 'goodbye!';
+    }else { document.querySelector('.lol').innerHTML = 'hello!'
+    }
+}
+
+function hello (){
+    const heading = document.querySelector('.lol')
+
+    if(heading.innerHTML === 'hello!'){
+        heading.innerHTML = 'goodbye!';
+    }else { 
+        heading.innerHTML = 'hello!'
+    }
+}
+
+ADDEVENTLISTNER TAKES 2 ARUMENTS ONE IS THE EVENT THE SECOND IS AN ANONYMOUS FUNCTION(){}
+where document.querySelector('button').addEventListener('click', count);
+                                        when click on button happens run the count function
+TEMPLATE LITTERAL SUBSTITUTE THE VALUE OF A VARIABLE
+
+
+
+-->
